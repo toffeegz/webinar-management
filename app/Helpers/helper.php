@@ -56,4 +56,9 @@ class Helper
     }
     
 
+    public function getExtensionServices()
+    {
+        return ExtensionService::all();
+    }
+
 }

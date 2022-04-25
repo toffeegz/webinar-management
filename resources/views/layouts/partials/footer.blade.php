@@ -46,10 +46,10 @@
                         Company
                     </p>
                     <nav class="flex flex-col mt-4 space-y-2 text-sm text-slate-800">
-                        <a class="hover:opacity-75" > About </a>
-                        <a class="hover:opacity-75" > Meet the Team </a>
-                        <a class="hover:opacity-75" > History </a>
-                        <a class="hover:opacity-75" > Careers </a>
+                        <a class="hover:opacity-75  hover:text-green-700">About </a>
+                        <a class="hover:opacity-75  hover:text-green-700">Meet the Team </a>
+                        <a class="hover:opacity-75  hover:text-green-700">History </a>
+                        <a class="hover:opacity-75  hover:text-green-700">Careers </a>
                     </nav>
                 </div>
                 <div>
@@ -57,12 +57,9 @@
                         Extension Services
                     </p>
                     <nav class="flex flex-col mt-4 space-y-2 text-sm text-slate-800">
-                        <a class="hover:opacity-75" > 1on1 Coaching </a>
-                        <a class="hover:opacity-75" > Company Review </a>
-                        <a class="hover:opacity-75" > Accounts Review </a>
-                        <a class="hover:opacity-75" > HR Consulting </a>
-                        <a class="hover:opacity-75" > SEO Optimisation </a>
-
+                        @foreach(Helper::getExtensionServices() as $data)
+                            <a class="hover:opacity-75 hover:text-green-700" >{{ $data->name }}</a>
+                        @endforeach
                     </nav>
                 </div>
                 <div>
@@ -70,9 +67,9 @@
                         Helpful Links
                     </p>
                     <nav class="flex flex-col mt-4 space-y-2 text-sm text-slate-800">
-                        <a class="hover:opacity-75" > Contact </a>
-                        <a class="hover:opacity-75" > FAQs </a>
-                        <a class="hover:opacity-75" > Live Chat </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Contact </a>
+                        <a class="hover:opacity-75 hover:text-green-700">FAQs </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Live Chat </a>
                     </nav>
                 </div>
                 <div>
@@ -80,10 +77,10 @@
                         Legal
                     </p>
                     <nav class="flex flex-col mt-4 space-y-2 text-sm text-slate-800">
-                        <a class="hover:opacity-75" > Privacy Policy </a>
-                        <a class="hover:opacity-75" > Terms &amp; Conditions </a>
-                        <a class="hover:opacity-75" > Returns Policy </a>
-                        <a class="hover:opacity-75" > Accessibility </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Privacy Policy </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Terms &amp; Conditions </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Returns Policy </a>
+                        <a class="hover:opacity-75 hover:text-green-700">Accessibility </a>
                     </nav>
                 </div>
             </div>
