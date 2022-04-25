@@ -1,1 +1,1 @@
-<img src="{{ asset('storage/img/toffee-gz1.png') }}" class="h-10 w-10">
+<img src="{{ asset('storage/img/icons/'.Helper::getCompanyInformation()->logo_icon) }}" class="h-10 w-10">
