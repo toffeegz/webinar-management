@@ -47,6 +47,7 @@ class LaratrustSetupTables extends Migration
         Schema::create('permission_user', function (Blueprint $table) {
             $table->unsignedBigInteger('permission_id');
             $table->unsignedBigInteger('user_id');
+            $table->boolean('limit_in_extension_service');
             $table->string('user_type');
 
             $table->foreign('permission_id')->references('id')->on('permissions')
