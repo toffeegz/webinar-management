@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'App\Http\Livewire'], function() {
+    Route::get('/', Landing\LandingComponent::class)->name('landing');
+
+    Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+        Route::group(['namespace' => 'Administrator'], function() {
+            Route::get('dashboard', Dashboard\DashboardComponent::class)->name('dashboard');
+        });
+    });
 });
 
 Route::get('/dashboard', function () {
