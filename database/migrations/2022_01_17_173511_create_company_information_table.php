@@ -19,7 +19,8 @@ class CreateCompanyInformationTable extends Migration
             $table->text('address')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('logo');
+            $table->string('logo_icon');
+            $table->string('logo_name');
             $table->string('headline_header');
             $table->text('headline_body');
             $table->timestamps();
